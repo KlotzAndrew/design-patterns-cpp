@@ -8,6 +8,9 @@ enable_testing()
 add_executable(SingletonTest test/creational/singleton_test.cpp)
 add_test(NAME SingletonTest COMMAND SingletonTest)
 
+add_executable(PrototypeTest test/creational/prototype_test.cpp)
+add_test(NAME PrototypeTest COMMAND PrototypeTest)
+
 add_executable(FactoryTest test/creational/factory_test.cpp)
 add_test(NAME FactoryTest COMMAND FactoryTest)
 
