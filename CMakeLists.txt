@@ -29,5 +29,8 @@ add_test(NAME CompositeTest COMMAND CompositeTest)
 add_executable(DecoratorTest test/structural/decorator_test.cpp)
 add_test(NAME DecoratorTest COMMAND DecoratorTest)
 
+add_executable(FacadeTest test/structural/facade_test.cpp)
+add_test(NAME FacadeTest COMMAND FacadeTest)
+
 add_executable(ChainOfResponsibilityTest test/behavioral/chain_of_responsibility_test.cpp)
 add_test(NAME ChainOfResponsibilityTest COMMAND ChainOfResponsibilityTest)
