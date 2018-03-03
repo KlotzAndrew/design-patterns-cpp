@@ -5,6 +5,9 @@ set(CMAKE_CXX_STANDARD 14)
 
 enable_testing()
 
+add_executable(BuilderTest test/creational/builder_test.cpp)
+add_test(NAME BuilderTest COMMAND BuilderTest)
+
 add_executable(SingletonTest test/creational/singleton_test.cpp)
 add_test(NAME SingletonTest COMMAND SingletonTest)
 
