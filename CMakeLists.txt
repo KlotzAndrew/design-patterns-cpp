@@ -20,5 +20,8 @@ add_test(NAME FactoryTest COMMAND FactoryTest)
 add_executable(AdapterTest test/structural/adapter_test.cpp)
 add_test(NAME AdapterTest COMMAND AdapterTest)
 
+add_executable(BridgeTest test/structural/bridge_test.cpp)
+add_test(NAME BridgeTest COMMAND BridgeTest)
+
 add_executable(ChainOfResponsibilityTest test/behavioral/chain_of_responsibility_test.cpp)
 add_test(NAME ChainOfResponsibilityTest COMMAND ChainOfResponsibilityTest)
