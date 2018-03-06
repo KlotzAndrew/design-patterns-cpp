@@ -37,3 +37,6 @@ add_test(NAME ProxyTest COMMAND ProxyTest)
 
 add_executable(ChainOfResponsibilityTest test/behavioral/chain_of_responsibility_test.cpp)
 add_test(NAME ChainOfResponsibilityTest COMMAND ChainOfResponsibilityTest)
+
+add_executable(CommandTest test/behavioral/command_test.cpp)
+add_test(NAME CommandTest COMMAND CommandTest)
