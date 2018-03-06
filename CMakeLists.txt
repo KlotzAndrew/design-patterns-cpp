@@ -32,6 +32,9 @@ add_test(NAME DecoratorTest COMMAND DecoratorTest)
 add_executable(FacadeTest test/structural/facade_test.cpp)
 add_test(NAME FacadeTest COMMAND FacadeTest)
 
+add_executable(FlyweightTest test/structural/flyweight_test.cpp)
+add_test(NAME FlyweightTest COMMAND FlyweightTest)
+
 add_executable(ProxyTest test/structural/proxy_test.cpp)
 add_test(NAME ProxyTest COMMAND ProxyTest)
 
