@@ -32,5 +32,8 @@ add_test(NAME DecoratorTest COMMAND DecoratorTest)
 add_executable(FacadeTest test/structural/facade_test.cpp)
 add_test(NAME FacadeTest COMMAND FacadeTest)
 
+add_executable(ProxyTest test/structural/proxy_test.cpp)
+add_test(NAME ProxyTest COMMAND ProxyTest)
+
 add_executable(ChainOfResponsibilityTest test/behavioral/chain_of_responsibility_test.cpp)
 add_test(NAME ChainOfResponsibilityTest COMMAND ChainOfResponsibilityTest)
