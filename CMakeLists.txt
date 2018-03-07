@@ -46,3 +46,6 @@ add_test(NAME CommandTest COMMAND CommandTest)
 
 add_executable(InterpreterTest test/behavioral/interpreter_test.cpp)
 add_test(NAME InterpreterTest COMMAND InterpreterTest)
+
+add_executable(IteratorTest test/behavioral/iterator_test.cpp)
+add_test(NAME IteratorTest COMMAND IteratorTest)
