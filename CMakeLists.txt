@@ -43,3 +43,6 @@ add_test(NAME ChainOfResponsibilityTest COMMAND ChainOfResponsibilityTest)
 
 add_executable(CommandTest test/behavioral/command_test.cpp)
 add_test(NAME CommandTest COMMAND CommandTest)
+
+add_executable(InterpreterTest test/behavioral/interpreter_test.cpp)
+add_test(NAME InterpreterTest COMMAND InterpreterTest)
