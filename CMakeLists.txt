@@ -64,3 +64,6 @@ add_test(NAME StateTest COMMAND StateTest)
 
 add_executable(StrategyTest test/behavioral/strategy_test.cpp)
 add_test(NAME StrategyTest COMMAND StrategyTest)
+
+add_executable(TemplateMethodTest test/behavioral/template_method_test.cpp)
+add_test(NAME TemplateMethodTest COMMAND TemplateMethodTest)
