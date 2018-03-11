@@ -5,6 +5,9 @@ set(CMAKE_CXX_STANDARD 14)
 
 enable_testing()
 
+add_executable(AbstractFactoryTest test/creational/abstract_factory_test.cpp)
+add_test(NAME AbstractFactoryTest COMMAND AbstractFactoryTest)
+
 add_executable(BuilderTest test/creational/builder_test.cpp)
 add_test(NAME BuilderTest COMMAND BuilderTest)
 
