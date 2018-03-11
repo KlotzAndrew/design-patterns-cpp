@@ -58,3 +58,6 @@ add_test(NAME MomentoTest COMMAND MomentoTest)
 
 add_executable(ObserverTest test/behavioral/observer_test.cpp)
 add_test(NAME ObserverTest COMMAND ObserverTest)
+
+add_executable(StateTest test/behavioral/state_test.cpp)
+add_test(NAME StateTest COMMAND StateTest)
