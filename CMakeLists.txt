@@ -55,3 +55,6 @@ add_test(NAME MediatorTest COMMAND MediatorTest)
 
 add_executable(MomentoTest test/behavioral/momento_test.cpp)
 add_test(NAME MomentoTest COMMAND MomentoTest)
+
+add_executable(ObserverTest test/behavioral/observer_test.cpp)
+add_test(NAME ObserverTest COMMAND ObserverTest)
