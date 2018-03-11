@@ -61,3 +61,6 @@ add_test(NAME ObserverTest COMMAND ObserverTest)
 
 add_executable(StateTest test/behavioral/state_test.cpp)
 add_test(NAME StateTest COMMAND StateTest)
+
+add_executable(StrategyTest test/behavioral/strategy_test.cpp)
+add_test(NAME StrategyTest COMMAND StrategyTest)
