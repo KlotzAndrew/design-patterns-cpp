@@ -1,0 +1,69 @@
+// Copyright 2018 Andrew Klotz
+
+#include <vector>
+
+class Account {
+ public:
+  Account() {
+    balance = 100;
+  }
+
+  int getBalance() {
+    return balance;
+  }
+
+  void add(int i) {
+    balance = balance + i;
+  }
+
+  void subtract(int i) {
+    balance = balance - i;
+  }
+
+ private:
+  int balance;
+};
+
+class Command {
+ public:
+  explicit Command(Account* a) : account(a) {}
+
+  virtual void execute() = 0;
+
+ protected:
+  Account* account;
+};
+
+class Invoker {
+ public:
+  void addCommand(Command* command) {
+    commands.push_back(command);
+  }
+
+  void execute() {
+    for (auto &command : commands) {
+      command->execute();
+    }
+  }
+
+ private:
+  std::vector<Command*> commands;
+};
+
+class AddCommand : public Command {
+ public:
+  explicit AddCommand(Account *a): Command(a) {}
+
+  void execute() override {
+    account->add(1);
+  }
+};
+
+class SubtractCommand : public Command {
+ public:
+  explicit SubtractCommand(Account *a): Command(a) {}
+
+  void execute() override {
+    account->subtract(1);
+  }
+};
