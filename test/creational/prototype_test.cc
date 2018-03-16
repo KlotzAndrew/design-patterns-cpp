@@ -7,9 +7,13 @@
 int main() {
   Factory* factory = new Factory(new Sheep);
   Sheep* sheep = factory->makeSheep();
-  assert(sheep->type() == "Sheep!");
+  std::string type = sheep->type();
+  assert(type == "Sheep!");
+  delete sheep;
 
   factory = new Factory(new MagicSheep);
   sheep = factory->makeSheep();
-  assert(sheep->type() == "Magic Sheep!");
+  type = sheep->type();
+  assert(type == "Magic Sheep!");
+  delete sheep;
 }

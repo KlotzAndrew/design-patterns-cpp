@@ -7,5 +7,7 @@
 int main() {
   Walker* walker = new DogWalker;
 
-  assert(walker->walk() == "woof");
+  std::string value = walker->walk();
+  assert(value == "woof");
+  delete walker;
 }

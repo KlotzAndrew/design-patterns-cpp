@@ -16,14 +16,20 @@ int main() {
   subject->setState(10);
   subject->notfiy();
 
-  assert(o1->getState() == 10);
-  assert(o2->getState() == 10);
+  int value_o1 = o1->getState();
+  int value_o2 = o2->getState();
+  assert(value_o1 == 10);
+  assert(value_o2 == 10);
 
   subject->detach(0);
 
   subject->setState(20);
   subject->notfiy();
 
-  assert(o1->getState() == 10);
-  assert(o2->getState() == 20);
+  value_o1 = o1->getState();
+  value_o2 = o2->getState();
+  assert(value_o1 == 10);
+  assert(value_o2 == 20);
+
+  delete subject;
 }

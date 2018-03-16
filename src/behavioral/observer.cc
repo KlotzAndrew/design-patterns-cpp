@@ -12,6 +12,10 @@ class Observer {
 
 class Subject {
  public:
+  Subject() {
+    state = 0;
+  }
+
   void attach(Observer *observer) {
     observers.push_back(observer);
   }
@@ -41,6 +45,10 @@ class Subject {
 
 class ConcreteObserver : public Observer {
  public:
+  ConcreteObserver() {
+    state = 0;
+  }
+
   int getState() {
     return state;
   }
@@ -55,6 +63,10 @@ class ConcreteObserver : public Observer {
 
 class ConcreteSubject : public Subject {
  public:
+  ConcreteSubject() {
+    state = 0;
+  }
+
   int getState() {
     return state;
   }

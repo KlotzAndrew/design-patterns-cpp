@@ -6,8 +6,10 @@
 
 int main() {
   SmallTax* small = new SmallTax(static_cast<double>(100));
-  assert(small->totalTax() == static_cast<double>(10));
+  double totalTax = small->totalTax();
+  assert(totalTax == static_cast<double>(10));
 
   BigTax* big = new BigTax(static_cast<double>(100));
-  assert(big->totalTax() == static_cast<double>(20));
+  totalTax = big->totalTax();
+  assert(totalTax == static_cast<double>(20));
 }

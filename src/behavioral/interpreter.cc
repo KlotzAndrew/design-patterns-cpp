@@ -24,9 +24,7 @@ class AbstractExpression {
 
 class TerminalExpression : public AbstractExpression {
  public:
-  explicit TerminalExpression(std::string val) {
-    value = val;
-  }
+  explicit TerminalExpression(std::string val) : value(val) {}
 
   bool interpret(Context *context) override {
     return context->get(value);

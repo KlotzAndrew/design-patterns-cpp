@@ -9,8 +9,10 @@ int main() {
   AbstractFactory *simpleFactry = new SimpleFactory;
 
   Shape *simpleShape = simpleFactry->createCurvedInstance();
-  assert(simpleShape->getValue() == "circle");
+  std::string name = simpleShape->getValue();
+  assert(name == "circle");
 
   Shape *complexShape = complexFactry->createCurvedInstance();
-  assert(complexShape->getValue() == "ellipse");
+  name = complexShape->getValue();
+  assert(name == "ellipse");
 }

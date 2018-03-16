@@ -7,6 +7,8 @@
 int main() {
   AbstractClass *klass = new ConcreteClass;
 
-  assert(klass->primitiveOperation1() == 10);
-  assert(klass->primitiveOperation2() == 20);
+  int value = klass->primitiveOperation1();
+  assert(value == 10);
+  value = klass->primitiveOperation2();
+  assert(value == 20);
 }

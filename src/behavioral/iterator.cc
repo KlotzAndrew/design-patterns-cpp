@@ -17,7 +17,9 @@ class Aggregate {
 
 class ConcreteIterator : public Iterator {
  public:
-  explicit ConcreteIterator(Aggregate *a): list(a) {}
+  explicit ConcreteIterator(Aggregate *a): list(a) {
+    index = 0;
+  }
 
   void first() override {
     index = 0;
@@ -49,6 +51,9 @@ class ConcreteAggregate : public Aggregate {
     list = new int[size]();
     for (int i = 0; i < size; i++) { list[i] = i; }
     count = size;
+  }
+  ~ConcreteAggregate() {
+    delete[] list;
   }
 
   Iterator* createIterator() override {

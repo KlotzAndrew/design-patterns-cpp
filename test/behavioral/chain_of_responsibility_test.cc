@@ -12,8 +12,15 @@ int main() {
   root->add(handler2);
   root->add(handler3);
 
-  assert(root->handle(1) == 10);
-  assert(root->handle(2) == 20);
-  assert(root->handle(3) == 30);
-  assert(root->handle(4) == 0);
+  int value = root->handle(1);
+  assert(value == 10);
+
+  value = root->handle(2);
+  assert(value == 20);
+
+  value = root->handle(3);
+  assert(value == 30);
+
+  value = root->handle(4);
+  assert(value == 0);
 }

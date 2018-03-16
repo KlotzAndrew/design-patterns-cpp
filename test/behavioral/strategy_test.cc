@@ -9,8 +9,10 @@ int main() {
   ConcreteStrategyB sb;
 
   Context *context = new Context(&sa);
-  assert(context->calculate() == 10);
+  int value = context->calculate();
+  assert(value == 10);
 
   context = new Context(&sb);
-  assert(context->calculate() == 20);
+  value = context->calculate();
+  assert(value == 20);
 }

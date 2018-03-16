@@ -16,12 +16,18 @@ int main() {
   mediator->add(c3);
 
   c1->gossip(10);
-  assert(c1->getValue() == 10);
-  assert(c2->getValue() == 10);
-  assert(c3->getValue() == 10);
+  int value_c1 = c1->getValue();
+  int value_c2 = c2->getValue();
+  int value_c3 = c3->getValue();
+  assert(value_c1 == 10);
+  assert(value_c2 == 10);
+  assert(value_c3 == 10);
 
   c1->gossip(88);
-  assert(c1->getValue() == 88);
-  assert(c2->getValue() == 88);
-  assert(c3->getValue() == 88);
+  value_c1 = c1->getValue();
+  value_c2 = c2->getValue();
+  value_c3 = c3->getValue();
+  assert(value_c1 == 88);
+  assert(value_c2 == 88);
+  assert(value_c3 == 88);
 }

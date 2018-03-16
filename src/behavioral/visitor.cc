@@ -25,7 +25,7 @@ class ConcreteVisitorA : public Visitor {
   }
 
   int visitElementB(Element *element) override {
-    return element->getValue() * 10;
+    return element->getValue() * 15;
   }
 };
 
@@ -36,7 +36,7 @@ class ConcreteVisitorB : public Visitor {
   }
 
   int visitElementB(Element *element) override {
-    return element->getValue() * 20;
+    return element->getValue() * 25;
   }
 };
 
@@ -58,6 +58,6 @@ class ConcreteElementB : public Element {
   }
 
   int accept(Visitor *visitor) override {
-    return visitor->visitElementA(this);
+    return visitor->visitElementB(this);
   }
 };

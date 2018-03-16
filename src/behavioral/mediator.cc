@@ -12,7 +12,10 @@ class Mediator {
 
 class Colleague {
  public:
-  explicit Colleague(Mediator *m) : mediator(m) {}
+  Colleague() {}
+  explicit Colleague(Mediator *m) : mediator(m) {
+    value = 0;
+  }
 
   int getValue() {
     return value;

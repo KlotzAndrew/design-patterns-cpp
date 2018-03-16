@@ -6,11 +6,14 @@
 
 int main() {
   Client* client = new Client(10);
-  assert(client->call() == 10);
+  int value = client->call();
+  assert(value == 10);
 
   Proxy* proxy = new Proxy(10);
-  assert(proxy->call() == 10);
+  value = proxy->call();
+  assert(value == 10);
 
   proxy = new Proxy(1);
-  assert(proxy->call() == 0);
+  value = proxy->call();
+  assert(value == 0);
 }

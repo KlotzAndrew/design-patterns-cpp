@@ -16,7 +16,10 @@ int main() {
   AbstractExpression *cat_and_dog = new NonTerminalExpression(cat, dog);
   AbstractExpression *dog_and_dog = new NonTerminalExpression(dog, dog);
 
-  assert(cat_and_cat->interpret(&context) == false);
-  assert(cat_and_dog->interpret(&context) == false);
-  assert(dog_and_dog->interpret(&context) == true);
+  bool exper1 = cat_and_cat->interpret(&context);
+  bool exper2 = cat_and_dog->interpret(&context);
+  bool exper3 = dog_and_dog->interpret(&context);
+  assert(exper1 == false);
+  assert(exper2 == false);
+  assert(exper3 == true);
 }

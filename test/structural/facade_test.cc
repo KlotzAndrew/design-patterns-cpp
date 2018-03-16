@@ -9,8 +9,13 @@ int main() {
   facade->start();
 
   Database* db = new Database;
-  assert(db->isConnected() == true);
+  bool db_connected = db->isConnected();
+  assert(db_connected == true);
 
   Cache* cache = new Cache;
-  assert(cache->isConnected() == true);
+  bool cache_connected = cache->isConnected();
+  assert(cache_connected == true);
+
+  delete db;
+  delete cache;
 }

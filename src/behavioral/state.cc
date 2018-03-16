@@ -22,6 +22,10 @@ class ConcreteStateB : public State {
 
 class Context {
  public:
+  Context() {
+    state = 0;
+  }
+
   void setState(State *s) {
     if (state) {
       delete state;

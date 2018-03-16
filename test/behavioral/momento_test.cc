@@ -11,14 +11,17 @@ int main() {
   originator->setState(10);
   caretaker->save();
 
-  assert(originator->getState() == 10);
+  int value = originator->getState();
+  assert(value == 10);
 
   originator->setState(20);
   caretaker->save();
 
-  assert(originator->getState() == 20);
+  value = originator->getState();
+  assert(value == 20);
 
   caretaker->undo();
 
-  assert(originator->getState() == 10);
+  value = originator->getState();
+  assert(value == 10);
 }

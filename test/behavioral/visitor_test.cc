@@ -11,9 +11,25 @@ int main() {
   ConcreteVisitorA *va = new ConcreteVisitorA;
   ConcreteVisitorB *vb = new ConcreteVisitorB;
 
-  assert(ea->accept(va) == 100);
-  assert(eb->accept(va) == 200);
+  int value;
 
-  assert(ea->accept(vb) == 200);
-  assert(eb->accept(vb) == 400);
+  value = ea->accept(va);
+  assert(value == 100);
+  value = ea->accept(vb);
+  assert(value == 200);
+
+  value = eb->accept(va);
+  assert(value == 300);
+  value = eb->accept(vb);
+  assert(value == 500);
+
+  value = ea->accept(va);
+  assert(value == 100);
+  value = ea->accept(vb);
+  assert(value == 200);
+
+  value = eb->accept(va);
+  assert(value == 300);
+  value = eb->accept(vb);
+  assert(value == 500);
 }

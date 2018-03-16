@@ -73,3 +73,17 @@ add_test(NAME TemplateMethodTest COMMAND TemplateMethodTest)
 
 add_executable(VisitorTest test/behavioral/visitor_test.cc)
 add_test(NAME VisitorTest COMMAND VisitorTest)
+
+add_custom_target(
+    cppcheck
+    COMMAND cppcheck
+      --enable=warning,style,performance,portability,unusedFunction
+      --std=c++11
+      --verbose
+      --error-exitcode=1
+      --language=c++
+      -DMAIN=main
+      src/
+      test/
+    COMMENT "running cppcheck"
+)

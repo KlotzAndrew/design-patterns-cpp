@@ -14,6 +14,12 @@ class Builder {
   Builder() {
     maze = new Maze;
   }
+  Builder(const Builder &builder) {
+    maze = new Maze;
+  }
+  ~Builder() {
+    delete maze;
+  }
 
   virtual void setLevel() = 0;
 

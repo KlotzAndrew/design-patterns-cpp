@@ -31,6 +31,14 @@ class Facade {
     db = new Database;
     cache = new Cache;
   }
+  Facade(const Facade &facade) {
+    db = new Database;
+    cache = new Cache;
+  }
+  ~Facade() {
+    delete db;
+    delete cache;
+  }
 
   void start() {
     db->connect();

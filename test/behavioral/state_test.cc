@@ -11,8 +11,10 @@ int main() {
   Context *context = new Context;
 
   context->setState(stateA);
-  assert(context->request() == 10);
+  int value = context->request();
+  assert(value == 10);
 
   context->setState(stateB);
-  assert(context->request() == 100);
+  value = context->request();
+  assert(value == 100);
 }

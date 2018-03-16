@@ -17,6 +17,9 @@ class Momento {
 
 class Originator {
  public:
+  Originator() {
+    state = 0;
+  }
   void setState(int s) {
     state = s;
   }
